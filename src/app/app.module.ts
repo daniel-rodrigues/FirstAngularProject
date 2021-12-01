@@ -9,6 +9,8 @@ import { FooterComponent } from './navigation/footer/footer.component';
 import { AboutComponent } from './institutional/about/about.component';
 import { ContactComponent } from './institutional/contact/contact.component';
 import { rootRouterConfig } from './app.routes';
+import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { rootRouterConfig } from './app.routes';
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
