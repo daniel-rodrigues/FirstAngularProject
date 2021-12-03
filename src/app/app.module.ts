@@ -11,6 +11,8 @@ import { ContactComponent } from './institutional/contact/contact.component';
 import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { ProductsService } from './products/products.service';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     AboutComponent,
     ContactComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     [RouterModule.forRoot(rootRouterConfig, { useHash: false })]
   ],
   providers: [
-  {provide: APP_BASE_HREF, useValue: '/'}
+    ProductsService,
+    { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
 })
