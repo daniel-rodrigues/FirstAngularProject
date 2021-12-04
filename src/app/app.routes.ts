@@ -3,6 +3,7 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
 import { AboutComponent } from './institutional/about/about.component';
 import { ContactComponent } from './institutional/contact/contact.component';
 import { HomeComponent } from './navigation/home/home.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 
 export const rootRouterConfig: Routes = [
@@ -12,5 +13,5 @@ export const rootRouterConfig: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'feature-data-binding', component: DataBindingComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'product-detail', component: ProductListComponent },
+  { path: 'product-detail/:id', component: ProductDetailComponent },
 ];

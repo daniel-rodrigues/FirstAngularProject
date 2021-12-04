@@ -4,7 +4,7 @@
         
         <div *ngFor="let product of products" class="col-md-4" style="padding-bottom: 30px;">
             <div class="card h-100">
-                <a class="text-decoration-none" [routerLink]="['/produto-detalhe', product.id]">
+                <a class="text-decoration-none" [routerLink]="['/product-detail', product.id]">
                     <div style="align-content:center;">
                         <img src="/assets/{{ product.image }}" height="164px" width="253px" alt="">
                     </div>
